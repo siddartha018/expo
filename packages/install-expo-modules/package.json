@@ -34,9 +34,9 @@
   },
   "scripts": {
     "prebuild": "expo-module clean",
-    "build": "ncc build ./src/index.ts -o build/",
+    "build": "node init && ncc build ./src/index.ts -o build/",
     "prebuild:prod": "expo-module clean",
-    "build:prod": "ncc build ./src/index.ts -o build/ --minify --no-cache --no-source-map-register",
+    "build:prod": "node init && ncc build ./src/index.ts -o build/ --minify --no-cache --no-source-map-register",
     "clean": "expo-module clean",
     "lint": "oxlint --config oxlint.config.mjs .",
     "format": "expo-module format",

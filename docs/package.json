@@ -4,8 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm generate-static-resources && next dev -p 3002 --webpack",
-    "build": "pnpm copy-latest && NEXT_TELEMETRY_DISABLED=1 SENTRY_SUPPRESS_INSTRUMENTATION_FILE_WARNING=1 next build --webpack && pnpm generate-markdown-pages && pnpm check-markdown-pages && pnpm generate-llms",
+    "dev": "node init && pnpm generate-static-resources && next dev -p 3002 --webpack",
+    "build": "node init && pnpm copy-latest && NEXT_TELEMETRY_DISABLED=1 SENTRY_SUPPRESS_INSTRUMENTATION_FILE_WARNING=1 next build --webpack && pnpm generate-markdown-pages && pnpm check-markdown-pages && pnpm generate-llms",
     "export": "pnpm copy-latest && pnpm generate-static-resources production && pnpm export-prep && NEXT_TELEMETRY_DISABLED=1 SENTRY_SUPPRESS_INSTRUMENTATION_FILE_WARNING=1 next build --webpack && pnpm generate-markdown-pages && pnpm check-markdown-pages && pnpm generate-llms",
     "export-preview": "pnpm copy-latest && pnpm generate-static-resources preview && pnpm export-prep && NEXT_TELEMETRY_DISABLED=1 SENTRY_SUPPRESS_INSTRUMENTATION_FILE_WARNING=1 next build --webpack && pnpm generate-markdown-pages && pnpm check-markdown-pages && pnpm generate-llms",
     "export-prep": "node ./scripts/export-prep.js",
