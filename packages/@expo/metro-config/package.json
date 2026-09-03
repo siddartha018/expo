@@ -61,7 +61,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "expo-build cjs:src",
+    "build": "node init && expo-build cjs:src",
     "clean": "expo-module clean",
     "lint": "oxlint --config oxlint.config.mjs .",
     "format": "expo-module format",

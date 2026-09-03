@@ -1,7 +1,7 @@
 {
   "name": "expo-cellular",
   "version": "57.0.1",
-  "description": "Provides information about the user’s cellular service provider",
+  "description": "Provides information about the user\u2019s cellular service provider",
   "keywords": [
     "expo",
     "expo-cellular",
@@ -21,9 +21,9 @@
   "main": "build/Cellular.js",
   "types": "build/Cellular.d.ts",
   "scripts": {
-    "build": "pnpm run build:lib && pnpm run build:plugin",
-    "build:lib": "expo-build src",
-    "build:plugin": "expo-build --base plugin cjs:src",
+    "build": "node init && pnpm run build:lib && pnpm run build:plugin",
+    "build:lib": "node init && expo-build src",
+    "build:plugin": "node init && expo-build --base plugin cjs:src",
     "clean": "expo-module clean",
     "lint": "oxlint --config oxlint.config.mjs .",
     "format": "expo-module format",

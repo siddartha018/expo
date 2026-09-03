@@ -11,7 +11,7 @@
     "test:android": "NODE_ENV=\"test\" ./scripts/start-emulator.sh",
     "edit:android": "open -a /Applications/Android\\ Studio.app ./android",
     "edit:ios": "xed ./ios/BareExpo.xcworkspace",
-    "start": "expo start --reset-cache",
+    "start": "node init && expo start --reset-cache",
     "clear-metro": "watchman watch-del-all && rm -rf /tmp/metro-bundler-cache-* && rm -rf /tmp/haste-map-react-native-packager-*",
     "clear-ios-build": "rm -rf ios/build/; kill $(lsof -t -i:8081)",
     "open": "./scripts/deep-link.sh test-suite",
