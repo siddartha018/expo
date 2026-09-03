@@ -31,9 +31,9 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "pnpm run build:lib && pnpm run build:cli",
-    "build:lib": "expo-build cjs:src",
-    "build:cli": "expo-build --base cli cjs:src",
+    "build": "node init && pnpm run build:lib && pnpm run build:cli",
+    "build:lib": "node init && expo-build cjs:src",
+    "build:cli": "node init && expo-build --base cli cjs:src",
     "clean": "expo-module clean",
     "lint": "oxlint --config oxlint.config.mjs .",
     "format": "expo-module format",

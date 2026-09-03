@@ -25,7 +25,7 @@
   },
   "main": "./app.plugin.js",
   "scripts": {
-    "build": "expo-build cjs:src",
+    "build": "node init && expo-build cjs:src",
     "lint": "oxlint --config oxlint.config.mjs .",
     "format": "expo-module format",
     "clean": "expo-module clean",

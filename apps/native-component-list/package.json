@@ -7,12 +7,12 @@
   "main": "expo-router/entry",
   "scripts": {
     "prebuild": "TEMPLATE_DIR=\"../../templates/expo-template-bare-minimum\" && cd \"$TEMPLATE_DIR\" && PACKED_FILE=$(npm pack) && mv \"$PACKED_FILE\" pack.tgz && cd - && npx expo prebuild --clean --template \"$TEMPLATE_DIR/pack.tgz\"",
-    "build:web": "expo export -p web",
+    "build:web": "node init && expo export -p web",
     "web": "expo start --web",
     "lint": "oxlint --config oxlint.config.mjs .",
     "format": "expo-module format",
     "tsc": "tsc --noEmit -p ./tsconfig.json",
-    "start": "expo start",
+    "start": "node init && expo start",
     "ios": "expo run:ios",
     "android": "expo run:android"
   },

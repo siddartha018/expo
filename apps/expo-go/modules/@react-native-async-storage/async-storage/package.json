@@ -40,8 +40,8 @@
   },
   "scripts": {
     "prepack": "pnpm build",
-    "build": "bob build",
-    "start": "(cd example && react-native start)",
+    "build": "node init && bob build",
+    "start": "node init && (cd example && react-native start)",
     "test:lint": "eslint $(git ls-files '*.js' '*.ts' '*.tsx')",
     "test:ts": "tsc"
   },
