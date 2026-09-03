@@ -83,7 +83,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "expo-build cjs:src=build/cjs src=build/mjs",
+    "build": "node init && expo-build cjs:src=build/cjs src=build/mjs",
     "clean": "rimraf build",
     "prepublishOnly": "run-s clean build",
     "lint": "oxlint --config oxlint.config.mjs .",

@@ -16,7 +16,7 @@
   ],
   "main": "build/expotools.js",
   "scripts": {
-    "build": "expo-build cjs:src=build",
+    "build": "node init && expo-build cjs:src=build",
     "clean": "rm -rf build cache",
     "et": "node bin/expotools.js",
     "lint": "eslint .",

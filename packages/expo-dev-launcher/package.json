@@ -9,8 +9,8 @@
     "directory": "packages/expo-dev-launcher"
   },
   "scripts": {
-    "build": "pnpm build:plugin",
-    "build:plugin": "expo-build --base plugin cjs:src",
+    "build": "node init && pnpm build:plugin",
+    "build:plugin": "node init && expo-build --base plugin cjs:src",
     "expo-module": "expo-module",
     "depscheck": "expo-module depscheck",
     "typecheck": "tsc -p plugin/tsconfig.json"

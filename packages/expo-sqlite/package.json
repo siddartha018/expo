@@ -47,10 +47,10 @@
     "./plugin": "./plugin/build/index.js"
   },
   "scripts": {
-    "build": "pnpm run build:lib && pnpm run build:plugin",
-    "build:lib": "expo-build src",
-    "build:plugin": "expo-build --base plugin cjs:src",
-    "build:webui": "node ./scripts/bundle_webui.mjs --force",
+    "build": "node init && pnpm run build:lib && pnpm run build:plugin",
+    "build:lib": "node init && expo-build src",
+    "build:plugin": "node init && expo-build --base plugin cjs:src",
+    "build:webui": "node init && node ./scripts/bundle_webui.mjs --force",
     "clean": "expo-module clean",
     "lint": "oxlint --config oxlint.config.mjs .",
     "format": "expo-module format",
